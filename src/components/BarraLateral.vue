@@ -3,9 +3,27 @@
     <h1>
       <img src="../assets/logo.png" alt="" srcset="">
     </h1>
-    <button class="button" @click="alterarTema">
-      {{ textoBotao }}
-    </button>
+    <div class="has-text-centered">
+      <button class="button" @click="alterarTema">
+        {{ textoBotao }}
+      </button>
+    </div>
+    <nav class="panel has-text-left mt-5">
+      <ul class="py-1">
+        <li class="px-3 py-1">
+          <router-link to="/" class="link">
+            <i class="fas fa-tasks"></i>
+            tarefas
+          </router-link>
+        </li>
+        <li class="px-3 py-1">
+          <router-link to="/projetos" class="link">
+            <i class="fas fa-project-diagram"></i>
+            projetos
+          </router-link>
+        </li>
+      </ul>
+    </nav>
   </header>
 </template>
 
@@ -52,5 +70,21 @@ header {
     padding: 2.5rem;
     height: auto;
   }
+}
+
+.panel li {
+  margin: 8px 0;
+}
+
+.link {
+  color: #fff;
+}
+
+.link:hover {
+  color: #faf0ca;
+}
+
+.link.router-link-active {
+  color: #faf0ca;
 }
 </style>
